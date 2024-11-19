@@ -22,4 +22,4 @@ Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
 
-
+https://www.geeksforgeeks.org/count-all-the-permutation-of-an-array/
