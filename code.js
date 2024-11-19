@@ -1,8 +1,10 @@
 function permutationSort(a) {
-  let count = 0;
+  let count = {value: 0};
   if (isSorted(a)){
    return count.value;
   }
+  permute(a,0,a.length-1,count);
+  return count.value
 }
 
 function permute(a,l,r,count){
@@ -14,13 +16,14 @@ function permute(a,l,r,count){
     return false;
 }
   for (let i = l; i<=r; i++){
-  count = permute(a, l + 1, r, count);
-    if (isSorted(a)){
-      return count;
+    swap(a,l,i);
+    if (permute(a,l+1,r,count)){
+      return true;
     }
+    swap(a,l,i);
   }
-
-
+  return false;
+}
 function isSorted(a){
   for (let i =0; i < a.length-1; i++){
     if (a[i] > a[i + 1]){
@@ -30,3 +33,8 @@ function isSorted(a){
   return true;
 }
 
+function swap(a,i,j){
+  const temp =a[i];
+  a[i]=a[j];
+  a[j]= temp;
+}
