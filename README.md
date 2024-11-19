@@ -28,6 +28,8 @@ becasue the function still needs to check if the array is sorted.
 The worst case would be if the array was sorted in decending order. The sorted array would end up being the last permutation that the function checks. It would need to generate all permutations giving it a worst case of $O(n!)$ this is super ineficient if the array is large. I believe if you generated the permutatioins randomly and without storing them the average would be $O(n * n!)$ because you need to generate $n!$ permutations before finding the sorted one. The number of permutations would be different for each run
 and could be greater or less then $O(n*n!)$.
 
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice
+
 Source:
 I used ChatGPT for help on the permute function
 ```
@@ -38,3 +40,4 @@ function permute(arr) {
 }
 ```
 https://gist.github.com/md2perpe/8210411
+https://forum.freecodecamp.org/t/need-help-with-permutations/611512
