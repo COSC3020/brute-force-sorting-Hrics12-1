@@ -1,18 +1,17 @@
 function permutationSort(a) {
   let count = 0;
   if (isSorted(a)){
-   return count;
+   return count.value;
   }
 }
 
 function permute(a,l,r,count){
   if (l===r){
+    count.value++;
     if (isSorted(a)){
-      console.log(a);
-      return count +1;
+      return true;
     }
-    return count;
-    
+    return false;
 }
   for (let i = l; i<=r; i++){
   count = permute(a, l + 1, r, count);
