@@ -29,5 +29,4 @@ function isSorted(a){
   }
   return true;
 }
-    return 0;
 
